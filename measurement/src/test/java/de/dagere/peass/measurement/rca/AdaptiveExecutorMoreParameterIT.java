@@ -76,6 +76,7 @@ public class AdaptiveExecutorMoreParameterIT {
 
       executor.getDurations(0);
 
+      LOG.debug("Found versions: {}", nodeWithDuration.getVersions());
       Assert.assertEquals(2, nodeWithDuration.getStatistics("000001").getN());
       Assert.assertEquals(2, nodeWithDuration.getStatistics("000001~1").getN());
    }

@@ -5,6 +5,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.ListIterator;
 import java.util.Map;
+import java.util.Set;
 
 import org.apache.commons.math3.exception.NumberIsTooSmallException;
 import org.apache.commons.math3.stat.descriptive.StatisticalSummary;
@@ -176,6 +177,10 @@ public class CallTreeNode extends BasicNode {
 
       CompareData cd = CompareData.createCompareDataFromOneVMResults(before, after);
       return cd;
+   }
+   
+   public Set<String> getVersions(){
+      return data.keySet();
    }
 
    public SummaryStatistics getStatistics(final String version) {
